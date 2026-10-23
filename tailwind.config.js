@@ -3,12 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: 'var(--bg)', paper: 'var(--paper)', ink: 'var(--ink)', muted: 'var(--muted)', line: 'var(--line)',
+        bg: 'var(--bg)', cream: 'var(--cream)', paper: 'var(--paper)', ink: 'var(--ink)', muted: 'var(--muted)', line: 'var(--line)',
         forest: 'var(--forest)', forestdeep: 'var(--forest-deep)', forestink: 'var(--forest-ink)', forestmuted: 'var(--forest-muted)',
-        mint: 'var(--mint)', apricot: 'var(--apricot)', apricotdeep: 'var(--apricot-deep)', apricotsoft: 'var(--apricot-soft)'
+        sage: 'var(--sage)', sagedeep: 'var(--sage-deep)', apricot: 'var(--apricot)', apricotdeep: 'var(--apricot-deep)', apricotsoft: 'var(--apricot-soft)'
       },
       fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'] },
-      maxWidth: { site: '78rem' }
+      maxWidth: { site: '80rem' }
     }
   }
 };
