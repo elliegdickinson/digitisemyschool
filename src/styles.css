@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  /* Layout: 12-column editorial grid on warm ivory; one forest-green band for the OpenApply audit; apricot reserved for the single most important action per section */
+  :root {
+    --bg: #F6F1E7;
+    --paper: #FBF8F1;
+    --ink: #1D2B24;
+    --muted: #56645B;
+    --line: #E2DACB;
+    --forest: #24513C;
+    --forest-ink: #F6F1E7;
+    --forest-muted: #C9DBCF;
+    --mint: #D3E7D9;
+    --mint-ink: #24513C;
+    --apricot: #F3B48C;
+    --apricot-soft: #FBE2CF;
+    --photo-ink: #5A3A24;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131B17; --paper: #1B2620; --ink: #EFEADF; --muted: #A9B5AC; --line: #2D3A33;
+      --forest: #1E4231; --forest-ink: #EFEADF; --forest-muted: #B5CBBD;
+      --mint: #23382D; --mint-ink: #BFDCC9; --apricot: #E9A47A; --apricot-soft: #3A2A20; --photo-ink: #F1C9AC;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131B17; --paper: #1B2620; --ink: #EFEADF; --muted: #A9B5AC; --line: #2D3A33;
+    --forest: #1E4231; --forest-ink: #EFEADF; --forest-muted: #B5CBBD;
+    --mint: #23382D; --mint-ink: #BFDCC9; --apricot: #E9A47A; --apricot-soft: #3A2A20; --photo-ink: #F1C9AC;
+    color-scheme: dark;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: Poppins, ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
+  .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  @media (min-width: 768px) { .gutter { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+  .eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+  .photo {
+    background-color: var(--apricot-soft);
+    background-image: repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--apricot) 22%, transparent) 14px 15px);
+  }
+  .photo-mint {
+    background-color: var(--mint);
+    background-image: repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--forest) 10%, transparent) 14px 15px);
+  }
+  .link-u { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .25s ease; }
+  .link-u:hover, .link-u:focus-visible { background-size: 100% 1px; }
+  .nudge { transition: transform .2s ease; }
+  .group:hover .nudge, .group:focus-visible .nudge { transform: translateX(4px); }
+  :focus-visible { outline: 2px solid var(--apricot); outline-offset: 3px; }
+  input, textarea { background: var(--paper); color: var(--ink); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
