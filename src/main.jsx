@@ -330,32 +330,63 @@ const cares = [
   'Families feeling looked after from their very first message.'
 ];
 
+const roles = [
+  ['North London Collegiate School Kobe, Japan', 'Director of Marketing and Admissions, founding team', '2024 to 2025'],
+  ['Rugby School Japan', 'Director of Marketing and Admissions, first academic year', '2024'],
+  ['Jerudong International School, Brunei', 'Head of Admissions and Marketing', '2011 to 2023'],
+  ["The Regent's School, Bangkok", 'Head of Boarding', '2008 to 2010'],
+  ['The International School of Penang (Uplands)', 'Head of Boarding', '2001 to 2008']
+];
+
 function Founder() {
   return (
     <section id="about" className="gutter">
       <div className="mx-auto grid max-w-site gap-12 py-20 md:py-24 lg:grid-cols-12 lg:gap-10">
-        <figure className="lg:col-span-6 lg:-ml-6 xl:-ml-16">
-          <div className="flex aspect-[4/5] flex-col justify-end rounded-[3px] bg-cream p-8 outline-dashed outline-2 -outline-offset-[16px] outline-line sm:p-10">
-            <p className="label text-forest">Photo of Anne</p>
-            <p className="mt-2 max-w-[24rem] text-[16px] leading-relaxed text-muted">A big, natural photo: at her desk, mid-conversation or walking round a school. Daylight, not a studio headshot.</p>
+        <div className="lg:col-span-6 lg:-ml-6 xl:-ml-16">
+          <figure>
+            <div className="flex aspect-[4/5] flex-col justify-end rounded-[3px] bg-cream p-8 outline-dashed outline-2 -outline-offset-[16px] outline-line sm:p-10">
+              <p className="label text-forest">Photo of Anne</p>
+              <p className="mt-2 max-w-[24rem] text-[16px] leading-relaxed text-muted">A big, natural photo: at her desk, mid-conversation or walking round a school. Daylight, not a studio headshot.</p>
+            </div>
+            <figcaption className="note mt-3 text-[16px] text-muted">↑ the person you'll actually be talking to</figcaption>
+          </figure>
+
+          <div className="mt-12 lg:ml-6 xl:ml-16">
+            <span className="doc-tab">Where I've done this</span>
+            <div className="tab-rule text-forest"></div>
+            <ol className="mt-2">
+              {roles.map(([school, role, years]) => (
+                <li key={school} className="grid gap-x-6 gap-y-0.5 border-b border-line py-4 sm:grid-cols-[1fr_auto]">
+                  <p className="text-[18px] font-semibold leading-snug">{school}</p>
+                  <p className="text-[16px] tabular-nums text-muted sm:row-span-2 sm:text-right">{years}</p>
+                  <p className="text-[17px] leading-snug text-muted">{role}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-[17px] leading-[1.65] text-muted">
+              Before schools: management roles at HSBC in the UK. Presenter at FOBISIA admissions and marketing conferences.
+            </p>
           </div>
-          <figcaption className="note mt-3 text-[16px] text-muted">↑ the person you'll actually be talking to</figcaption>
-        </figure>
+        </div>
 
         <div className="lg:col-span-6 lg:pt-6">
           <span className="doc-tab apricot">Meet Anne</span>
           <h2 className="display mt-6 text-[60px] sm:text-[92px]">Hi, I'm Anne.</h2>
           <div className="mt-8 max-w-[36rem] space-y-6 text-[19px] leading-[1.75]">
+            <p className="text-[21px] leading-[1.6]">
+              I'm the person behind Digitise My School. If you get in touch, you'll be emailing me, you'll be talking to me on the call, and it'll be me working through your OpenApply settings afterwards.
+            </p>
             <p>
-              I'm the person behind Digitise My School. If you get in touch, you'll be emailing me, you'll be talking to me on the call, and it'll be me working through your OpenApply settings afterwards. No account managers, no hand-offs.
+              I've spent more than 25 years working in schools across Asia, and over 15 of them running admissions and marketing. For twelve years I led Admissions and Marketing at Jerudong International School in Brunei, where I introduced OpenApply, launched two school websites and grew the team from four people to eleven, while the school grew from around 1,200 students to almost 1,700.
             </p>
-            <p className="rounded-[3px] bg-apricotsoft px-5 py-4 text-[18px]">
-              <span className="label block text-[#7A4120]">Anne, edit me</span>
-              [My background, in my own words: the international schools I've worked in, what I did there, and what I learned about how admissions really runs.]
+            <p>
+              More recently I've been on the founding teams at Rugby School Japan and North London Collegiate School Kobe, setting up admissions and marketing from a blank page, OpenApply included. So I've seen admissions systems from both ends: <span className="marker-soft">the established school with years of workarounds, and the brand-new one where you get to decide how everything should work.</span>
             </p>
-            <p className="rounded-[3px] bg-apricotsoft px-5 py-4 text-[18px]">
-              <span className="label block text-[#7A4120]">Anne, edit me</span>
-              [Why I started this: the problem I kept seeing in admissions offices that made me want to help fix it.]
+            <p>
+              Before admissions I was a Head of Boarding in Penang and Bangkok, looking after children whose parents were often a long way away, and before schools I worked in banking. Both are good reminders that behind every enquiry is a family making a big decision, and the admin should make that easier, not harder.
+            </p>
+            <p>
+              I'm based in Hanoi and work with schools across the region, in person or remotely.
             </p>
           </div>
 
