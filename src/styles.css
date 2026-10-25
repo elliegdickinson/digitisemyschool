@@ -27,7 +27,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: Poppins, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -38,9 +38,9 @@ main { overflow-x: clip; }
 @media (min-width: 768px) { .gutter { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
 
 /* Type */
-.label { font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.label { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
 .display { font-weight: 600; letter-spacing: -0.045em; line-height: 0.92; }
-.note { font-style: italic; font-weight: 300; font-size: 0.95rem; line-height: 1.4; }
+.note { font-style: italic; font-weight: 400; font-size: 1.0625rem; line-height: 1.45; }
 
 /* Motif: document tab */
 .doc-tab {
