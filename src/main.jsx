@@ -347,10 +347,8 @@ function Founder() {
             <div className="lg:sticky lg:top-28">
               <div className="relative mr-5">
                 <div className="absolute -bottom-5 -right-5 left-8 top-10 rounded-[4px] bg-apricotsoft" aria-hidden="true"></div>
-                <div className="relative flex aspect-[4/5] flex-col justify-end rounded-[4px] bg-paper p-8 sm:p-10">
-                  <div className="absolute inset-4 rounded-[2px] border-2 border-dashed border-line" aria-hidden="true"></div>
-                  <p className="relative text-[17px] font-medium text-forest">A photo of Anne goes here</p>
-                  <p className="relative mt-1 max-w-[22rem] text-[16px] leading-relaxed text-muted">Natural and relaxed: at her desk, mid-conversation or out on a school site. Daylight, not a studio headshot.</p>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-sage">
+                  <img src="img/anne-dickinson.webp" alt="Anne Dickinson, founder of Digitise My School, smiling outdoors in a leafy courtyard" className="photo" style={{ objectPosition: 'center 30%' }} decoding="async" />
                 </div>
               </div>
               <blockquote className="relative mt-14 border-l-[3px] border-apricot pl-6">
