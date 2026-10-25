@@ -340,61 +340,71 @@ const roles = [
 
 function Founder() {
   return (
-    <section id="about" className="gutter">
-      <div className="mx-auto grid max-w-site gap-12 py-20 md:py-24 lg:grid-cols-12 lg:gap-10">
-        <div className="lg:col-span-6 lg:-ml-6 xl:-ml-16">
-          <figure>
-            <div className="flex aspect-[4/5] flex-col justify-end rounded-[3px] bg-cream p-8 outline-dashed outline-2 -outline-offset-[16px] outline-line sm:p-10">
-              <p className="label text-forest">Photo of Anne</p>
-              <p className="mt-2 max-w-[24rem] text-[16px] leading-relaxed text-muted">A big, natural photo: at her desk, mid-conversation or walking round a school. Daylight, not a studio headshot.</p>
+    <section id="about" className="gutter bg-cream">
+      <div className="mx-auto max-w-site py-20 md:py-28">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-28">
+              <div className="relative mr-5">
+                <div className="absolute -bottom-5 -right-5 left-8 top-10 rounded-[4px] bg-apricotsoft" aria-hidden="true"></div>
+                <div className="relative flex aspect-[4/5] flex-col justify-end rounded-[4px] bg-paper p-8 sm:p-10">
+                  <div className="absolute inset-4 rounded-[2px] border-2 border-dashed border-line" aria-hidden="true"></div>
+                  <p className="relative text-[17px] font-medium text-forest">A photo of Anne goes here</p>
+                  <p className="relative mt-1 max-w-[22rem] text-[16px] leading-relaxed text-muted">Natural and relaxed: at her desk, mid-conversation or out on a school site. Daylight, not a studio headshot.</p>
+                </div>
+              </div>
+              <blockquote className="relative mt-14 border-l-[3px] border-apricot pl-6">
+                <p className="text-[24px] font-light italic leading-[1.45] tracking-[-0.01em] text-forest sm:text-[27px]">
+                  "I've seen admissions systems from both ends: the established school with years of workarounds, and the brand-new one where you get to decide how everything should work."
+                </p>
+              </blockquote>
             </div>
-            <figcaption className="note mt-3 text-[16px] text-muted">↑ the person you'll actually be talking to</figcaption>
-          </figure>
-
-          <div className="mt-12 lg:ml-6 xl:ml-16">
-            <span className="doc-tab">Where I've done this</span>
-            <div className="tab-rule text-forest"></div>
-            <ol className="mt-2">
-              {roles.map(([school, role, years]) => (
-                <li key={school} className="grid gap-x-6 gap-y-0.5 border-b border-line py-4 sm:grid-cols-[1fr_auto]">
-                  <p className="text-[18px] font-semibold leading-snug">{school}</p>
-                  <p className="text-[16px] tabular-nums text-muted sm:row-span-2 sm:text-right">{years}</p>
-                  <p className="text-[17px] leading-snug text-muted">{role}</p>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-5 text-[17px] leading-[1.65] text-muted">
-              Before schools: management roles at HSBC in the UK. Presenter at FOBISIA admissions and marketing conferences.
-            </p>
-          </div>
-        </div>
-
-        <div className="lg:col-span-6 lg:pt-6">
-          <span className="doc-tab apricot">Meet Anne</span>
-          <h2 className="display mt-6 text-[60px] sm:text-[92px]">Hi, I'm Anne.</h2>
-          <div className="mt-8 max-w-[36rem] space-y-6 text-[19px] leading-[1.75]">
-            <p className="text-[21px] leading-[1.6]">
-              I'm the person behind Digitise My School. If you get in touch, you'll be emailing me, you'll be talking to me on the call, and it'll be me working through your OpenApply settings afterwards.
-            </p>
-            <p>
-              I've spent more than 25 years working in schools across Asia, and over 15 of them running admissions and marketing. For twelve years I led Admissions and Marketing at Jerudong International School in Brunei, where I introduced OpenApply, launched two school websites and grew the team from four people to eleven, while the school grew from around 1,200 students to almost 1,700.
-            </p>
-            <p>
-              More recently I've been on the founding teams at Rugby School Japan and North London Collegiate School Kobe, setting up admissions and marketing from a blank page, OpenApply included. So I've seen admissions systems from both ends: <span className="marker-soft">the established school with years of workarounds, and the brand-new one where you get to decide how everything should work.</span>
-            </p>
-            <p>
-              Before admissions I was a Head of Boarding in Penang and Bangkok, looking after children whose parents were often a long way away, and before schools I worked in banking. Both are good reminders that behind every enquiry is a family making a big decision, and the admin should make that easier, not harder.
-            </p>
-            <p>
-              I'm based in Hanoi and work with schools across the region, in person or remotely.
-            </p>
           </div>
 
-          <div className="mt-10 max-w-[36rem] border-t-[1.5px] border-forest pt-6">
-            <p className="text-[19px] font-semibold">What I care about</p>
-            <ul className="mt-4 space-y-3">
-              {cares.map(c => <li key={c} className="flex gap-3 text-[18px] leading-snug"><Tick className="mt-0.5 text-apricotdeep" />{c}</li>)}
-            </ul>
+          <div className="lg:col-span-6 lg:col-start-7 lg:pt-4">
+            <h2 className="leading-[0.95] tracking-[-0.04em]">
+              <span className="block text-[44px] font-light italic text-apricotdeep sm:text-[60px]">Hi,</span>
+              <span className="block text-[64px] font-semibold sm:text-[100px]">I'm Anne.</span>
+            </h2>
+
+            <div className="mt-10 max-w-[34rem] space-y-6 text-[19px] leading-[1.8] lg:text-[20px]">
+              <p className="text-[21px] leading-[1.65] lg:text-[23px]">
+                I'm the person behind Digitise My School. If you get in touch, you'll be emailing me, you'll be talking to me on the call, and it'll be me working through your OpenApply settings afterwards.
+              </p>
+              <p>
+                I've spent more than 25 years working in schools across Asia, and over 15 of them running admissions and marketing. For twelve years I led Admissions and Marketing at Jerudong International School in Brunei, where I introduced OpenApply, launched two school websites and grew the team from four people to eleven, while the school grew from around 1,200 students to almost 1,700.
+              </p>
+              <p>
+                More recently I've been on the founding teams at Rugby School Japan and North London Collegiate School Kobe, setting up admissions and marketing from a blank page, OpenApply included.
+              </p>
+              <p>
+                Before admissions I was a Head of Boarding in Penang and Bangkok, looking after children whose parents were often a long way away, and before schools I worked in banking. Both are good reminders that behind every enquiry is a family making a big decision, and the admin should make that easier, not harder.
+              </p>
+              <p>
+                I'm based in Hanoi and work with schools across the region, in person or remotely.
+              </p>
+            </div>
+
+            <div className="mt-14 max-w-[34rem] space-y-12">
+              <div>
+                <p className="text-[20px] font-semibold">What I care about</p>
+                <ul className="mt-4 space-y-3">
+                  {cares.map(c => <li key={c} className="flex gap-3 text-[18px] leading-snug"><Tick className="mt-0.5 text-apricotdeep" />{c}</li>)}
+                </ul>
+              </div>
+              <div>
+                <p className="text-[20px] font-semibold">Where I've done this</p>
+                <ul className="mt-4 space-y-3.5">
+                  {roles.map(([school, role, years]) => (
+                    <li key={school} className="text-[18px] leading-snug">
+                      <span className="font-medium">{school}</span>
+                      <span className="block text-[17px] text-muted">{role}, {years}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 text-[17px] leading-[1.6] text-muted">Before schools, management roles at HSBC in the UK. I've also presented at FOBISIA admissions and marketing conferences.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -405,60 +415,51 @@ function Founder() {
 /* Services */
 const services = [
   {
-    tag: 'OpenApply',
     title: 'Make OpenApply work for you',
-    body: "I review your statuses, forms, checklists, user permissions and automated emails, remove what's no longer used, and set the rest up around how your admissions team actually works. You get a written record of the setup, so it no longer lives in one person's head.",
+    body: "I'll go through your statuses, forms, checklists, permissions and emails, clear out what nobody uses, and set the rest up around how your team really works. Then I'll write it all down, so it doesn't live in one person's head.",
     eg: 'Cutting eleven application statuses down to seven, each with a clear definition.'
   },
   {
-    tag: 'Workflows',
     title: 'Less admin, better admissions',
-    body: 'I map the journey from first enquiry to first day, find where details are re-keyed or passed along by email, and redesign those steps with automation, checklists and clear ownership in the systems you already have.',
-    eg: "Moving tour bookings out of a shared calendar and into OpenApply, so every visit sits on the family's record."
+    body: 'I follow a family from first enquiry to first day, spot where details get re-typed or forwarded by email, and fix those steps with automation and clear ownership in the systems you already have.',
+    eg: "Moving tour bookings out of a shared calendar and onto the family's record."
   },
   {
-    tag: 'Communications',
     title: 'Keep families in the loop',
-    body: 'Families hear from admissions, marketing, finance and teachers. I help you agree who sends what and when, then build the templates and triggered emails so the right message goes out at each stage, in the languages your families use.',
-    eg: 'A welcome sequence in English, Vietnamese and Korean that goes out automatically when an offer is accepted.'
+    body: 'Admissions, marketing, finance and teachers all talk to families. I help you agree who says what and when, then set up templates and triggered emails so it happens without anyone having to remember.',
+    eg: 'A welcome sequence in English, Vietnamese and Korean that sends itself when an offer is accepted.'
   },
   {
-    tag: 'Marketing',
     title: "Reach the families you're looking for",
-    body: 'Admissions pages that answer the questions parents really ask, enquiry forms that feed straight into your CRM, social content your team can keep up with, and a check on how your school appears when parents ask AI assistants for recommendations.',
+    body: "Admissions pages that answer parents' real questions, enquiry forms that land straight in your CRM, social media your team can keep up with, and a look at what AI assistants say about your school.",
     eg: "Rewriting a fees page so parents stop emailing to ask what's included."
   },
   {
-    tag: 'Training',
     title: 'Get your whole team on board',
-    body: 'Practical training for admissions, marketing and front-office staff, short written procedures people will actually follow, and support when a new term or a new colleague arrives.',
-    eg: "A one-page 'how we handle enquiries' guide that a new starter can follow on day one."
+    body: 'Friendly, practical training for admissions, marketing and front-office staff, simple written guides, and someone to ask when a new term or a new colleague comes along.',
+    eg: "A one-page 'how we handle enquiries' guide a new starter can follow on day one."
   }
 ];
 
 function Services() {
   return (
-    <section id="services" className="gutter bg-cream">
-      <div className="mx-auto max-w-site py-20 md:py-24">
-        <div className="grid gap-5 md:grid-cols-12">
-          <h2 className="display text-[52px] sm:text-[80px] md:col-span-7 md:col-start-6">What I can help with</h2>
-          <p className="text-[19px] leading-[1.7] text-muted md:col-span-5 md:col-start-6">
+    <section id="services" className="gutter">
+      <div className="mx-auto max-w-site py-20 md:py-28">
+        <div className="max-w-[46rem]">
+          <h2 className="display text-[52px] sm:text-[80px]">What I can help with</h2>
+          <p className="mt-6 text-[20px] leading-[1.7] text-muted">
             Bring me in for one of these, or for whatever is causing the most grumbling in the office right now.
           </p>
         </div>
-        <ol className="mt-12">
-          {services.map(s => (
-            <li key={s.title} className="group grid gap-x-8 gap-y-4 py-8 md:grid-cols-12">
-              <div className="md:col-span-12">
-                <span className="doc-tab transition group-hover:bg-apricotsoft group-hover:text-[#7A4120]">{s.tag}</span>
-                <div className="tab-rule text-forest"></div>
+        <ol className="mt-16 space-y-16 md:space-y-20">
+          {services.map((s, i) => (
+            <li key={s.title} className={'grid max-w-[54rem] grid-cols-[3rem_1fr] gap-x-4 sm:grid-cols-[4.5rem_1fr] sm:gap-x-6 ' + (i % 2 === 1 ? 'md:ml-[22%]' : '')}>
+              <span className="pt-2 text-[22px] font-light tabular-nums text-apricotdeep sm:text-[28px]">0{i + 1}</span>
+              <div>
+                <h3 className="text-[32px] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-[46px]">{s.title}</h3>
+                <p className="mt-4 max-w-[38rem] text-[19px] leading-[1.75] lg:text-[20px]">{s.body}</p>
+                <p className="mt-4 max-w-[38rem] text-[17px] leading-[1.6] text-muted"><span className="font-light italic text-apricotdeep">For example: </span>{s.eg}</p>
               </div>
-              <h3 className="pt-2 text-[30px] font-semibold leading-[1.1] tracking-[-0.025em] sm:text-[36px] md:col-span-4">{s.title}</h3>
-              <p className="pt-2 text-[19px] leading-[1.7] md:col-span-5">{s.body}</p>
-              <p className="pt-2 text-[17px] leading-[1.6] text-muted md:col-span-3">
-                <span className="note block text-[16px] text-forest">For example</span>
-                {s.eg}
-              </p>
             </li>
           ))}
         </ol>
@@ -675,9 +676,8 @@ function Approach() {
       <div className="mx-auto max-w-site py-20 md:py-24">
         <div className="grid items-center gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-5">
-            <span className="doc-tab">How I work</span>
-            <div className="tab-rule text-forest"></div>
-            <h2 className="mt-7 text-[38px] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-[52px]">
+            <p className="text-[18px] font-medium text-apricotdeep">How I work</p>
+            <h2 className="mt-3 text-[38px] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-[52px]">
               The answer is rarely another piece of software.
             </h2>
             <p className="mt-6 text-[19px] leading-[1.75] text-muted">
@@ -721,61 +721,46 @@ function Contact() {
   };
   return (
     <section id="contact" className="gutter bg-apricotsoft">
-      <div className="mx-auto max-w-site py-20 md:py-24">
-        <div className="grid gap-6 md:grid-cols-12 md:items-end">
-          <h2 className="display text-[56px] sm:text-[88px] md:col-span-7">Let's have a proper chat.</h2>
-          <p className="text-[19px] leading-[1.7] md:col-span-5 md:pb-3">
-            No forms in triplicate. Just tell me a little about what's going on, and I'll reply myself.
+      <div className="mx-auto grid max-w-site gap-14 py-20 md:py-28 lg:grid-cols-12 lg:gap-12">
+        <div className="lg:col-span-5">
+          <h2 className="display text-[56px] sm:text-[84px]">Let's have a proper chat.</h2>
+          <p className="mt-8 max-w-[28rem] text-[21px] leading-[1.65]">
+            Whether you've got a specific system problem or just a feeling things could work better, I'd love to hear what's going on.
           </p>
-        </div>
-
-        <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <form className="paper-shadow rounded-[3px] bg-paper px-6 py-8 sm:px-10 sm:py-10 lg:col-span-8" onSubmit={onSubmit}>
-            <p className="text-[22px] font-semibold">Hi Anne,</p>
-            <p className="mt-5 text-[20px] leading-[2.2]">
-              I'm
-              <label className="sr-only" htmlFor="contact-name">Your name</label>
-              <input id="contact-name" name="name" autoComplete="name" placeholder="your name" className={inlineField} />
-              from
-              <label className="sr-only" htmlFor="contact-school">Your school</label>
-              <input id="contact-school" name="school" autoComplete="organization" placeholder="your school" className={inlineField} />.
+          <div className="mt-10 flex max-w-[28rem] items-start gap-4">
+            <span className="grid h-14 w-14 flex-none place-items-center rounded-full bg-paper text-[22px] font-light italic text-apricotdeep" aria-hidden="true">A</span>
+            <p className="text-[18px] leading-[1.65] text-muted">
+              I read every message myself and reply with a couple of questions. If it sounds like I can help, we'll have a relaxed 20-minute call. No obligation, and no sales emails afterwards.
             </p>
-            <label htmlFor="contact-message" className="mt-6 block text-[20px]">Here's what's going on:</label>
-            <textarea id="contact-message" name="message" rows="4" placeholder="e.g. Our enquiries live in four places and nobody quite trusts the numbers."
-              className="mt-3 w-full rounded-[3px] border-[1.5px] border-line bg-bg px-4 py-3.5 text-[18px] leading-[1.6] placeholder:text-muted focus:border-forest focus:outline-none"></textarea>
-            <p className="mt-6 text-[20px] leading-[2.2]">
-              You can reach me at
-              <label className="sr-only" htmlFor="contact-email">Your email</label>
-              <input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@school.edu" className={inlineField + ' sm:w-72'} />
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-5">
-              <button type="submit" className="group inline-flex items-center gap-3 rounded-[3px] bg-forest px-6 py-4 text-[17px] font-medium text-forestink hover:bg-forestdeep">
-                Send it to Anne<Arrow />
-              </button>
-              {sent && <p className="text-[16px]" role="status">Your email app should open with your note ready to send.</p>}
-            </div>
-          </form>
-
-          <div className="lg:col-span-4 lg:pt-4">
-            <p className="text-[21px] font-semibold">What happens next</p>
-            <ol className="mt-5 space-y-5">
-              {[
-                ['I read it myself', 'No sales team, no automated sequence.'],
-                ['I reply with a couple of questions', 'Usually about your setup and what you would like to change.'],
-                ['We have a short call', 'Around 20 minutes, to see whether I can help. No obligation.']
-              ].map(([t, d], i) => (
-                <li key={t} className="grid grid-cols-[2rem_1fr] gap-x-3">
-                  <span className="text-[17px] font-semibold tabular-nums text-apricotdeep">0{i + 1}</span>
-                  <div>
-                    <p className="text-[18px] font-medium">{t}</p>
-                    <p className="text-[17px] leading-[1.6] text-muted">{d}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-8 text-[17px]">Prefer email? <a href={`mailto:${EMAIL}`} className="link-u font-medium">{EMAIL}</a></p>
           </div>
+          <p className="mt-8 text-[18px]">Or just email me at <a href={`mailto:${EMAIL}`} className="link-u font-medium">{EMAIL}</a></p>
         </div>
+
+        <form className="rounded-[4px] bg-paper px-6 py-9 sm:px-12 sm:py-12 lg:col-span-7" onSubmit={onSubmit}>
+          <p className="text-[24px] font-light italic text-apricotdeep">Hi Anne,</p>
+          <p className="mt-5 text-[20px] leading-[2.3]">
+            I'm
+            <label className="sr-only" htmlFor="contact-name">Your name</label>
+            <input id="contact-name" name="name" autoComplete="name" placeholder="your name" className={inlineField} />
+            from
+            <label className="sr-only" htmlFor="contact-school">Your school</label>
+            <input id="contact-school" name="school" autoComplete="organization" placeholder="your school" className={inlineField} />.
+          </p>
+          <label htmlFor="contact-message" className="mt-6 block text-[20px]">Here's what's going on:</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="e.g. Our enquiries live in four places and nobody quite trusts the numbers."
+            className="mt-3 w-full rounded-[4px] border-0 bg-cream px-5 py-4 text-[19px] leading-[1.65] placeholder:text-muted focus:outline focus:outline-2 focus:outline-forest"></textarea>
+          <p className="mt-6 text-[20px] leading-[2.3]">
+            You can reach me at
+            <label className="sr-only" htmlFor="contact-email">Your email</label>
+            <input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@school.edu" className={inlineField + ' sm:w-72'} />
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-5">
+            <button type="submit" className="group inline-flex items-center gap-3 rounded-[4px] bg-forest px-7 py-4 text-[18px] font-medium text-forestink hover:bg-forestdeep">
+              Send Anne a message<Arrow />
+            </button>
+            {sent && <p className="text-[17px]" role="status">Your email app should open with your note ready to send.</p>}
+          </div>
+        </form>
       </div>
     </section>
   );
